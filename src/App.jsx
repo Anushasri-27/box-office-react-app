@@ -1,12 +1,20 @@
 import {BrowserRouter,Routes,Route} from "react-router-dom";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
+import Starred from "./pages/Starred";
+import Mainlayout from "./components/Mainlayout";
+
 function App() {
   return (
+    //client-side navigation
      <BrowserRouter>
          <Routes>
-              <Route path="/" element={ <Home />} ></Route>
-              <Route path="/contact" element={<div ><Contact /></div>} ></Route>
+          < Route element={<Mainlayout />} >
+              <Route path="/" element={ <Home /> } ></Route>
+              <Route path="/Starred" element={ <Starred />}></Route>
+              <Route path="/contact" element={<Contact  />} ></Route>
+          </Route>
+          <Route path="*" element={<div>PAGE NOT FOUND</div>}   ></Route> 
          </Routes>
      </BrowserRouter>
   );
