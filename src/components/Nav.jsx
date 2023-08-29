@@ -1,13 +1,40 @@
 import { Link } from "react-router-dom";
 
+const LINK=[
+{
+ text:"Home",
+ to:"/",
+
+},
+{
+    text:"Contact",
+    to:"/contact",
+
+
+},
+{
+   text:"starred",
+   to:"/starred",
+
+}
+
+]
 
 function Nav(){
     return(
-     <>
-         <div>navbar</div>
-        <Link to="/Starred">LINK TO STTARED MOVIES</Link>
-       
-     </>
+     <div>
+        <ul>
+            {
+                LINK.map((item) => (
+                       <li key={item.to}>
+                              <Link to={item.to}>{item.text}</Link>
+
+                       </li>          
+                    ))
+            }
+
+        </ul>  
+     </div>
     )
 };
 
