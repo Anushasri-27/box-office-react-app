@@ -28,7 +28,6 @@ function Nav(){
                 LINK.map((item) => (
                        <li key={item.to}>
                               <Link to={item.to}>{item.text}</Link>
-
                        </li>          
                     ))
             }

@@ -2,8 +2,7 @@
 function Starred(){
 return(
     <>
-      
-     <div> starred</div>
+      <div> starred</div>
     </>
 )
 
