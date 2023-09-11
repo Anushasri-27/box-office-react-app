@@ -10,6 +10,8 @@ const ShowGrid = ({ shows }) => {
           image={
             data.show.image ? data.show.image.medium : '/imagePlaceHolder.png'
           }
+          id={data.show.id}
+          summary={data.show.summary}
         />
       ))}
     </div>
