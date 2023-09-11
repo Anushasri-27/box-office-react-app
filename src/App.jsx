@@ -15,7 +15,7 @@ function App() {
               <Route path="/Starred" element={ <Starred />}></Route>
               <Route path="/contact" element={<Contact  />} ></Route>
           </Route>
-          <Route path="/show/:ShowId" element={<Show />}/>
+          <Route path="/shows/:ShowId" element={<Show />}/>
           <Route path="*" element={<div>PAGE NOT FOUND</div>}   ></Route> 
          </Routes>
      </BrowserRouter>

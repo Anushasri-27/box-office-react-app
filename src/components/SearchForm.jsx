@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState} from "react";
 
 
 
@@ -7,8 +7,9 @@ const SearchForm = ({onSearch} ) =>{
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [searchStr, setSearchStr] = useState(' ');
   const [searchOption, setSearchOption] = useState('shows'); // can be shows aor actor
-
+  //use of useEffect hook
   
+
   const onInputChange = ev => {
         setSearchStr(ev.target.value);
       };
