@@ -2,6 +2,7 @@
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
 import { getShowById } from '../api/tvmaze';
+import { Link } from 'react-router-dom';
 import ShowMainData from '../components/shows/ShowMainData';
 import Details from '../components/shows/Details';
 import Season from '../components/shows/Season';
@@ -22,6 +23,8 @@ const Show = () => {
     return (
       <div>
          <div>
+          <Link to="/">Go Back</Link>
+
           <ShowMainData
             image={showData.image}
             name={showData.name}
