@@ -1,5 +1,6 @@
 import { useState} from "react";
 import { useSearchStr } from "../lib/useSearchStr";
+import CustomRadio from "./CustomRadio";
 
 
 
@@ -31,36 +32,35 @@ const SearchForm = ({onSearch} ) =>{
 
     return(
 
-        <form name="search" id="search-box" onSubmit={onSubmit}>
+        <form  onSubmit={onSubmit}>
         <input
           name="blog"
           value={searchStr}                        //adding value attribute to implemt two wau data binding
           type="text"
           onChange={onInputChange}
         />
-        <br></br>
-        <label>
-          shows
-          <input
-            type="radio"
-            name="search-option"
-            checked={searchOption === 'shows'}
-            onChange={onRadioChange}
-            value="shows"
-          />
-        </label>
-        <br></br>
-        <label>
-          actors
-          <input
-            type="radio"
-            name="search-option"
-            checked={searchOption === 'actors'}
-            onChange={onRadioChange}
-            value="actors"
-          />
-        </label>
-        <button type="submit" className="btn-style">
+         
+         <CustomRadio 
+             label="Shows"
+             type="radio"
+             name="search-option"
+             checked={searchOption === 'shows'}
+             onChange={onRadioChange}
+             value="shows"
+         
+         />
+          <CustomRadio 
+             label="Actors"
+             type="radio"
+             name="search-option"
+             checked={searchOption === 'actors'}
+             onChange={onRadioChange}
+             value="actors"
+         
+         />
+
+
+        <button type="submit" >
           Search
         </button>
       </form>

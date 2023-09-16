@@ -15,7 +15,7 @@ const ActorCard = ({ name, image, gender, country, birthday ,deathday}) => {
          
          <p>{birthday}</p>
          <p>{deathday}</p>
-        <button type="button">star me</button>
+       
       </div>
       <br></br>
     </div>

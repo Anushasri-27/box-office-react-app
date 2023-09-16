@@ -5,6 +5,9 @@ import { searchForShow, searchForPeople } from '../api/tvmaze';
 import ShowGrid from '../components/shows/ShowGrid';
 import ActorsGrid from '../components/actors/ActorsGrid';
 import SerachForm from '../components/SearchForm';
+import styled ,{css , ThemeProvider}from 'styled-components';
+
+
 const Home = () => {
   const [filter, setFilter] = useState(null);
 
@@ -47,7 +50,7 @@ const Home = () => {
     <>
       <div className="search-container">
         <SerachForm onSearch={onSearch} />
-
+       
         <div>{renderApiData()}</div>
       </div>
     </>

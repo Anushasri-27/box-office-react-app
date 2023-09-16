@@ -5,14 +5,16 @@ import Contact from './pages/Contact';
 import Starred from './pages/Starred';
 import Mainlayout from './components/Mainlayout';
 import Show from './pages/Show';
-
+import GlobalTheme from './theme';
 // Create a client outside of the component
 const queryClient = new QueryClient();
+
 
 function App() {
   return (
     //client-side navigation
     <QueryClientProvider client={queryClient}>
+      <GlobalTheme>
       <BrowserRouter>
         <Routes>
           <Route element={<Mainlayout />}>
@@ -24,6 +26,7 @@ function App() {
           <Route path="*" element={<div>PAGE NOT FOUND</div>}></Route>
         </Routes>
       </BrowserRouter>
+      </GlobalTheme>
     </QueryClientProvider>
   );
 }
