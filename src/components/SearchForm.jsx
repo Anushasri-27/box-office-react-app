@@ -1,11 +1,12 @@
 import { useState} from "react";
+import { useSearchStr } from "../lib/useSearchStr";
 
 
 
 const SearchForm = ({onSearch} ) =>{
     
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [searchStr, setSearchStr] = useState(' ');
+  const [searchStr, setSearchStr] = useSearchStr();
   const [searchOption, setSearchOption] = useState('shows'); // can be shows aor actor
   //use of useEffect hook
   
