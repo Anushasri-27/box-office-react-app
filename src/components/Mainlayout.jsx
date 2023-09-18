@@ -4,8 +4,8 @@ import AppTitle from "./AppTitle";
 function Mainlayout(){
 return(
     <div>
-         <Nav />
-         <AppTitle />
+          <AppTitle />
+           <Nav />
          <Outlet />
     </div>
 )

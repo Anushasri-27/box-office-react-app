@@ -1,5 +1,6 @@
-import { useStarredShows} from '../../lib/useStarredShows'
+import { useStarredShows} from '../../lib/useStarredShows';
 import ShowCard from './ShowCard';
+import {FlexGrid} from '../../common/FlexGrid';
 
 //logic to save starred show in local storage
 
@@ -19,7 +20,7 @@ const ShowGrid = ({ shows }) => {
   };
 
   return (
-    <div>
+    <FlexGrid>
       {shows.map(data => (
         <ShowCard
           key={data.show.id}
@@ -33,7 +34,7 @@ const ShowGrid = ({ shows }) => {
           isStarred={starredShow.includes(data.show.id)}
         />
       ))}
-    </div>
+    </FlexGrid>
   );
 };
 

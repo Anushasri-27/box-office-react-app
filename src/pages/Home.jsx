@@ -6,7 +6,7 @@ import ShowGrid from '../components/shows/ShowGrid';
 import ActorsGrid from '../components/actors/ActorsGrid';
 import SerachForm from '../components/SearchForm';
 import styled ,{css , ThemeProvider}from 'styled-components';
-
+import {TextCenter} from '../common/TextCenter';
 
 const Home = () => {
   const [filter, setFilter] = useState(null);
@@ -28,11 +28,11 @@ const Home = () => {
   const renderApiData = () => {
     //display error
     if (apiDataError) {
-      return <div>error:{apiDataError.message}</div>;
+      return <TextCenter>error:{apiDataError.message}</TextCenter>;
     }
 
     if (apiData?.length === 0) {
-      return <div>no results</div>;
+      return <TextCenter>no results</TextCenter>;
     }
 
     if (apiData) {
