@@ -1,6 +1,7 @@
 import { useStarredShows} from '../../lib/useStarredShows';
 import ShowCard from './ShowCard';
 import {FlexGrid} from '../../common/FlexGrid';
+import ImagePlaceHolder from '../../lib/imagePlaceHolder.png'
 
 //logic to save starred show in local storage
 
@@ -26,7 +27,7 @@ const ShowGrid = ({ shows }) => {
           key={data.show.id}
           name={data.show.name}
           image={
-            data.show.image ? data.show.image.medium : '/imagePlaceHolder.png'
+            data.show.image ? data.show.image.medium : ImagePlaceHolder
           }
           id={data.show.id}
           summary={data.show.summary}

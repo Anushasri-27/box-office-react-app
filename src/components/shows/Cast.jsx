@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import ImagePlaceHolder from '../../lib/imagePlaceHolder.png'
 
 const Cast = ({ cast }) => {
   return (
@@ -10,7 +11,7 @@ const Cast = ({ cast }) => {
               src={
                 person.image
                   ? person.image.medium
-                  : '/imagePlaceHolder.png'
+                  : ImagePlaceHolder
               }
             
             />

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { StarIcon } from '../../common/StarIcon';
+import ImagePlaceHolder from '../../lib/imagePlaceHolder.png'
 const ShowMainData = ({ image, name, rating, genres, summary }) => {
   return (
     <MainDataWrapper>
@@ -8,7 +9,7 @@ const ShowMainData = ({ image, name, rating, genres, summary }) => {
           height="200"
           width="200"
           alt={name}
-          src={image ? image.original : '/imagePlaceHolder.png'}
+          src={image ? image.original : ImagePlaceHolder}
         />
       </div>
       <DataSection>

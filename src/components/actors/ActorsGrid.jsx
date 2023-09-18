@@ -1,5 +1,6 @@
 import ActorCard from "./ActorCard";
 import {FlexGrid} from '../../common/FlexGrid';
+import ImagePlaceHolder from '../../lib/imagePlaceHolder.png'
 const ActorsGrid = ({actors})=>{
     return(
         
@@ -13,7 +14,7 @@ const ActorsGrid = ({actors})=>{
                   deathday={data.person.deathday}
                   gender={data.person.gender}
                   image={
-                    data.person.image ? data.person.image.medium : '/imagePlaceHolder.png'
+                    data.person.image ? data.person.image.medium : ImagePlaceHolder
                   }
                 />
               ))}
