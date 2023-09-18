@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import Home from './pages/Home';
+import { HashRouter } from 'react-router-dom';
 import Contact from './pages/Contact';
 import Starred from './pages/Starred';
 import Mainlayout from './components/Mainlayout';
@@ -15,7 +16,7 @@ function App() {
     //client-side navigation
     <QueryClientProvider client={queryClient}>
       <GlobalTheme>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route element={<Mainlayout />}>
             <Route path="/" element={<Home />}></Route>
@@ -25,7 +26,7 @@ function App() {
           <Route path="/shows/:ShowId" element={<Show />} />
           <Route path="*" element={<div>PAGE NOT FOUND</div>}></Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
       </GlobalTheme>
     </QueryClientProvider>
   );
